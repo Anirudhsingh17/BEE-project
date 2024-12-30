@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAT pvt. Limited.</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: black;
+            background-color: white;
+            
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .radius{
+            border-radius: 30px;
+        }
+        .offer {
+            /* background-color: #000; */
+            /* color: #fff; */
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .navbar {
+            /* background-color: rgb(220, 109, 30); */
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+            /* background: linear-gradient(to right, #ffcccb, #add8e6); */
+        }
+        .navbar-brand img {
+            height: 60px;
+        }
+        .nav-link {
+            font-weight: 600;
+            font-size: large;
+            margin-right: 15px;
+            color: pink;
+        }
+        
+
+        .icons i {
+            color: black;
+            font-size: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .icons i:hover {
+            color: #fff;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+        }
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .product-card img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .product-card img:hover {
+            transform: scale(0.95);
+        }
+        
+        .deal-section {
+            /* background: linear-gradient(to right, #a18cd1, #fbc2eb);      */
+            background: linear-gradient(to right, rgb(70, 70, 221), rgb(229, 6, 229), orange);
+                   color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+       
+        
+        .deal-content {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            right: 20px;
+            bottom: -50px;
+            transform: translateY(-50%);
+            width: 100%;
+            max-width: 350px;
+            border-radius: 100px;
+        }
+        .customer-review {
+            /*background-color: #f9f9f9;*/
+            padding: 50px 20px;
+        }
+        .customer-review .review-text {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .customer-review .reviewer-name {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            color: black;
+        }
+        /* .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .footer h5 {
+            margin-bottom: 20px;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            display: block; 
+            margin-bottom: 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        } */
+        .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+.footer h5 {
+    margin-bottom: 20px;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+#map-container {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+}
+.copyright{
+text-align: center;
+font-size: 30px;
+}
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        @media (max-width: 767px) {
+            .nav-link {
+                margin-right: 0;
+            }
+            .deal-content {
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+            .product-card {
+                margin-bottom: 30px;
+            }
+            .container{
+                text-align: center;
+            }
+        }
+        .name-font{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .img-margin{
+            padding-bottom: 25px;
+
+        }
+       
+.bank-offer {
+    background: linear-gradient(to right, #ffcccb, #add8e6); /* Light pink to light blue */
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    max-width: 100%;
+}
+img.response {
+            width: 80%; /* Adjust width as needed */
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+@media (min-width: 768px) {
+    .bank-offer h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .bank-offer h1 {
+        font-size: 1.2rem;
+    }
+
+    .bank-offer {
+        border-radius: 20px;
+    }
+    img.response {
+                width: 100%; /* Make image fill the screen width on smaller devices */
+                max-width: 300px; /* You can adjust this as needed */
+            }
+}
+.radius{
+    border-radius:30px;
+    padding: 0;
+}
+
+.faq-heading {
+  background: linear-gradient(to right, rgb(70, 70, 221), rgb(229, 6, 229), orange);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.faq-box {
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd;
+  border-radius: 20px; 
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+.faq-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question .icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  display: none; 
+  margin-top: 10px;
+}
+
+.faq-question.active .icon {
+  transform: rotate(45deg); 
+}
+
+@media (max-width: 768px) {
+  .faq-box {
+    padding: 15px;
+  }
+  .faq-heading {
+    font-size: 22px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+.signup-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; 
+    background-color: #fff; 
+    border: 2px solid #000; 
+    border-radius: 12px;
+    width: 300px; 
+    text-decoration: none; 
+    margin-bottom: 10px;
+
+}
+
+
+.message-icon {
+    font-size: 50px; 
+    margin-right: 15px; 
+    color:black;
+}
+
+.button-text {
+    line-height: 1.2; 
+}
+
+.main-text {
+    font-size: 20px; 
+    color: black;
+}
+
+.sub-text {
+    font-size: 15px; 
+    color: #555; 
+    font-weight: 500;
+}
+
+.dismissible-div {
+    background: plum;
+    color: #fff;                      
+    padding: 5px;      
+    text-align: center;                
+    position: relative;                
+    margin: 3px 0;                   
+    border-radius: 18px;             
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    overflow: hidden;                  
+}
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+        .wrapper {
+        text-align: center;
+    }
+
+    .coupon {
+        background: linear-gradient(to right, rgb(70, 70, 221), rgb(229, 6, 229), orange);
+        color: #fff;
+        padding: 20px;
+        border-radius: 100px;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .button1 {
+        padding: 12px 24px;
+        border: none;
+        background-color: rgb(70, 70, 221);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 15px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .button1:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+    }
+
+    .button1:hover:not(:disabled) {
+        background-color: rgb(229, 6, 229);
+    }
+
+    .coupon-code {
+        margin: 20px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: red;
+    }
+
+    .discount-info {
+        font-size: 16px;
+        color: red;
+        line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+        .coupon {
+            font-size: 22px;
+        }
+
+        .button1 {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .coupon-code {
+            font-size: 1.2em;
+        }
+
+        .discount-info {
+            font-size: 14px;
+        }
+    }
+    .deal-section {
+    background: linear-gradient(to right, rgb(70, 70, 221), rgb(229, 6, 229), orange);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.deal-content {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 100px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px; /* Adjust the bottom value */
+    transform: none; /* Remove translateY(-50%) for better positioning */
+    width: 100%;
+    max-width: 350px;
+}
+.cartAmount{
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: 6px;
+    padding: 1px;
+    
+}
+.cart{
+    position: relative;
+}
+.priceQuantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    gap: 8px;
+    margin-right: 60px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Offer Banner -->
+    <div class="offer">
+        BUY 1 GET 1 FREE 💣 Last FEW Units Left - ORDER NOW 👉
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#earbuds">Earbuds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#soundbars" >Soundbars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#earphones">Earphones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#combos">Combos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="helpCenterDropdown" role="button" data-bs-toggle="dropdown">
+                            Help Center
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="helpCenterDropdown">
+                            <li><a class="dropdown-item" href="#">Call Us: 123-456-7890</a></li>
+                            <li><a class="dropdown-item" href="#">Book your Appointment</a></li>
+                            <li><a class="dropdown-item" href="#">Track your Order</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+                <button id="ani" onclick="Anirudh()" style="border-radius: 50px; box-shadow: 3px 3px; margin-right: 20px;">Dark Mode</button>
+
+            <div class="icons d-none d-lg-flex cart">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="cartAmount">0</div>
+                
+            <!-- <img src="images/user-solid.svg" height="20px" width="20px" alt=""> -->
+            </div>
+            <!-- <button style="border-radius: 50px;"><img src="images/user-solid.svg" height="20px" width="20px" onclick="openPage()" alt=""></button> -->
+            <!-- <button style="border-radius: 50px;"><img src="images/user-solid.svg" height="20px" width="20px"  alt=""></button> -->
+        <a href="back_end/index.html" style="height: 20px; width: 20px;" ><img src="images/user-solid.svg" alt=""></a>
+        </div>
+    </nav>
+    <div id="myDiv" class="dismissible-div">
+        <span class="close" onclick="closeDiv()">×</span>
+        <span>Due to high demand, shipping may take an additional 3-5 business days.</span>
+        <p>Thank you for your understanding!</p>
+    </div>
+    
+        </body>   
+        
+    <!-- Hero Image -->
+    <!-- <div class="container-fluid p-0">
+        <img src="images/WhatsApp Image 2024-08-24 at 6.51.00 PM.jpeg" alt="Hero Image" class="hero-image">
+    </div> -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/parallax1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/parallax2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/parallax3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- Shop by Categories -->
+    
+    
+    <div class="container my-5">
+        <h1 class="section-title">Shop by Categories</h1>
+        
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 mb-4" >
+               <a href="#soundbars" > <img src="images/1.png" alt="Category 1" class="img-fluid img-margin radius"></a>
+            </div>
+            <div class="col-sm-6 col-lg-6 mb-4">
+            <a href="#earphones"> <img src="images/2.png" alt="Category 2" class="img-fluid img-margin radius"></a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 mb-4">
+               <a href="#combos"><img src="images/3.png" alt="Category 3" class="img-fluid radius"></a>
+            </div>
+            <div class="col-sm-6 col-lg-6 mb-4">
+                <a href="#earbuds"><img src="images/file.png" alt="Category 4" class="img-fluid radius"></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="parralax pone">
+        
+    </div>
+    <!-- Best Sellers -->
+
+    <div class="container my-5">
+        <h1 class="section-title">Explore the Best Sellers</h1>
+        <p class="section-subtitle">Unmatched sound signature with powerful bass, designed to be carried with you.</p>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card ">
+                    <img class="response" src="images/DEALNEW.png" alt="Collar Classic Pro">
+                    <h5 class="mt-3">Collar Classic Pro</h5>
+                    <p>₹1900</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('collar-classic-pro', -1)"></i>
+                            <div class="quantity" id="collar-classic-pro-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('collar-classic-pro', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Collar Classic Pro', 1900)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear2new.png" alt="Duopods i6" class="radius">
+                    <h5 class="mt-3">Duopods i6</h5>
+                    <p>₹1399</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('duopods-i6', -1)"></i>
+                            <div class="quantity" id="duopods-i6-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('duopods-i6', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Duopods i6', 1399)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear3new.png" alt="SuperPods Dueto">
+                    <h5 class="mt-3">SuperPods Dueto</h5>
+                    <p>₹1899</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('superpods-dueto', -1)"></i>
+                            <div class="quantity" id="superpods-dueto-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('superpods-dueto', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('SuperPods Dueto', 1899)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear4new.png" alt="DuoPods i3">
+                    <h5 class="mt-3">DuoPods i3</h5>
+                    <p>₹999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('duopods-i3', -1)"></i>
+                            <div class="quantity" id="duopods-i3-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('duopods-i3', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods i3', 999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parralax ptwo"></div>
+
+    <!-- Deal of the Day -->
+    <div class="deal-section my-5">
+        <h1 style="font-weight: 600;">DEAL OF THE WEEK</h1>
+        <div class="timer" id="countdown" style="font-size: 24px; font-weight: bold; color: white;"></div>
+        <div class="deal-content">
+            <h4>DuoPods i2 + Collar Flash Neckband</h4>
+            <h3>₹1599</h3>
+            
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to (1 day from now)
+        const countDownDate = new Date().getTime() + 1 * 24 * 60 * 60 * 1000; // 1 day timer
+    
+        // Update the countdown every second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+    
+            // Time calculations for hours, minutes, and seconds
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Display the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML =` Hurry! Time left: ${hours}h ${minutes}m ${seconds}s`;
+    
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "DEAL EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Combo Deals -->
+    <!-- <div class="container my-5" id="combos">
+        <h1 class="section-title">Combo Deals</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="product-card">
+                    <img class="response" src="images/combo1.png" alt="Combo 1">
+                    <h5 class="mt-3">DuoPods i2 + Collar Flash Neckband</h5>
+                    <p><b>₹1599</b></p>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="product-card">
+                    <img class="response" src="images/combo2.png" alt="Combo 2">
+                    <h5 class="mt-3">DuoPods M20 + Play Speaker Combo</h5>
+                    <p><b>₹1499</b></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="product-card">
+                    <img class="response" src="images/combo3.png" alt="Combo 3">
+                    <h5 class="mt-3">DuoPods i7 + Rock & Roll E5 Combo</h5>
+                    <p><b>₹1699</b></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="product-card">
+                    <img class="response" src="images/combo4.png" alt="Combo 4">
+                    <h5 class="mt-3">DuoPods F50 + Play Speaker Combo</h5>
+                    <p><b>₹1499</b></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container my-5" id="combos">
+        <h1 class="section-title">Combo Deals</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/combo1.png" alt="Combo 1">
+                    <h5 class="mt-3">DuoPods i2 + Collar Flash Neckband</h5>
+                    <p>₹1599</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('combo1', -1)"></i>
+                            <div class="quantity" id="combo1-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('combo1', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods i2 + Collar Flash Neckband', 1599)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/combo2.png" alt="Combo 2">
+                    <h5 class="mt-3">DuoPods M20 + Play Speaker Combo</h5>
+                    <p>₹1499</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('combo2', -1)"></i>
+                            <div class="quantity" id="combo2-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('combo2', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods M20 + Play Speaker Combo', 1499)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/combo3.png" alt="Combo 3">
+                    <h5 class="mt-3">DuoPods i7 + Rock & Roll E5 Combo</h5>
+                    <p>₹1699</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('combo3', -1)"></i>
+                            <div class="quantity" id="combo3-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('combo3', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods i7 + Rock & Roll E5 Combo', 1699)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/combo4.png" alt="Combo 4">
+                    <h5 class="mt-3">DuoPods F50 + Play Speaker Combo</h5>
+                    <p>₹1499</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('combo4', -1)"></i>
+                            <div class="quantity" id="combo4-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('combo4', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods F50 + Play Speaker Combo', 1499)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Earbuds -->
+    <div class="container my-5" id="earbuds">
+        <h1 class="section-title">Earbuds</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear1new.png" alt="SuperPods Halo">
+                    <h5 class="mt-3">SuperPods Halo</h5>
+                    <p>₹1900</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earbuds1', -1)"></i>
+                            <div class="quantity" id="earbuds1-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earbuds1', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('SuperPods Halo', 1900)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear2new.png" alt="Duopods i6">
+                    <h5 class="mt-3">Duopods i6</h5>
+                    <p>₹1399</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earbuds2', -1)"></i>
+                            <div class="quantity" id="earbuds2-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earbuds2', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Duopods i6', 1399)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear3new.png" alt="SuperPods Dueto">
+                    <h5 class="mt-3">SuperPods Dueto</h5>
+                    <p>₹1899</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earbuds3', -1)"></i>
+                            <div class="quantity" id="earbuds3-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earbuds3', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('SuperPods Dueto', 1899)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/ear4new.png" alt="DuoPods i3">
+                    <h5 class="mt-3">DuoPods i3</h5>
+                    <p>₹999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earbuds4', -1)"></i>
+                            <div class="quantity" id="earbuds4-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earbuds4', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('DuoPods i3', 999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!--bank_offer--> 
+   <!-- <div class="bank-offer container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8"><h1 style="color: #1d1965;"><b>Flat 5% Off on Earbuds with All Bank Cards </b> <i class="fa-regular fa-credit-card"></i></h1></div>
+    </div>
+    <div class="row" >
+        <div class="col-2"></div>
+        <div class="col-7" style="background-color: #1d1965; color: white;margin-left: 10px; border-radius: 100px;"><h1><b>&nbsp;&nbsp;Up to 6 months No Cost EMI Available*</b></h1></div>
+    </div>
+
+   </div> -->
+   <div class="bank-offer container-fluid">
+    <div class="row align-items-center">
+        <div class="col-12 col-md-2"></div>
+        <div class="col-12 col-md-8 text-center">
+            <h1 style="color: #1d1965; font-size: 1.5rem;"><b>Flat 5% Off on Earbuds with All Bank Cards</b> 
+            <i class="fa-regular fa-credit-card"></i></h1>
+        </div>
+    </div>
+    <div class="row align-items-center mt-3">
+        <div class="col-12 col-md-2"></div>
+        <div class="col-12 col-md-8 text-center" style="background-color: #1d1965; color: white; border-radius: 50px; padding: 10px;">
+            <h1 style="font-size: 1.5rem;"><b>Up to 6 months No Cost EMI Available*</b></h1>
+        </div>
+    </div>
+</div>
+    <!-- Earphones -->
+    <div class="container my-5" id="earphones">
+        <h1 class="section-title">Earphones</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/phone1.png" alt="Collar Classic Pro">
+                    <h5 class="mt-3">Collar Classic Pro</h5>
+                    <p>₹1399</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earphone1', -1)"></i>
+                            <div class="quantity" id="earphone1-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earphone1', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Collar Classic Pro', 1399)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/phone2.png" alt="Rock & Roll E5">
+                    <h5 class="mt-3">Rock & Roll E5</h5>
+                    <p>₹399</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earphone2', -1)"></i>
+                            <div class="quantity" id="earphone2-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earphone2', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Rock & Roll E5', 399)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/phone3.png" alt="Conquer X">
+                    <h5 class="mt-3">Conquer X</h5>
+                    <p>₹999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earphone3', -1)"></i>
+                            <div class="quantity" id="earphone3-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earphone3', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Conquer X', 999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/DEALNEW.png" alt="Collar D25">
+                    <h5 class="mt-3">Collar D25</h5>
+                    <p>₹1299</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('earphone4', -1)"></i>
+                            <div class="quantity" id="earphone4-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('earphone4', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Collar D25', 1299)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parralax pthree"></div>
+    <!-- Soundbars -->
+    <div class="container my-5" id="soundbars">
+        <h1 class="section-title">Soundbars</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/speaker1.png" alt="Fort Q700 D">
+                    <h5 class="mt-3">Fort Q700 D</h5>
+                    <p>₹13,999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('soundbar1', -1)"></i>
+                            <div class="quantity" id="soundbar1-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('soundbar1', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Fort Q700 D', 13999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/speaker2.png" alt="Fort R50">
+                    <h5 class="mt-3">Fort R50</h5>
+                    <p>₹2,999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('soundbar2', -1)"></i>
+                            <div class="quantity" id="soundbar2-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('soundbar2', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Fort R50', 2999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/speaker3.png" alt="Fort S440">
+                    <h5 class="mt-3">Fort S440</h5>
+                    <p>₹8,999</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('soundbar3', -1)"></i>
+                            <div class="quantity" id="soundbar3-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('soundbar3', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Fort S440', 8999)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4 name-font">
+                <div class="product-card">
+                    <img class="response" src="images/speaker4.png" alt="Fort S100">
+                    <h5 class="mt-3">Fort S100</h5>
+                    <p>₹4,499</p>
+                    <div class="priceQuantity">
+                        <div class="buttons">
+                            <i class="ri-subtract-line" onclick="updateQuantity('soundbar4', -1)"></i>
+                            <div class="quantity" id="soundbar4-quantity">0</div>
+                            <i class="ri-add-line" onclick="updateQuantity('soundbar4', 1)"></i>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Fort S100', 4499)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Customer Reviews -->
+    <div class="customer-review my-5">
+        <h2 class="section-title">Our Customers ❤️ Us</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="review-text">"Mivi earbuds exceed expectations! Exceptional sound clarity, snug fit for active use, and impressive battery life. A must-have for music lovers on the go!"</div>
+                <div class="reviewer-name">- Navdeep</div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="review-text">"Mivi soundbars elevate home audio with cinematic sound, sleek design, and powerful bass. Transform your home space into an entertainment hub!"</div>
+                <div class="reviewer-name">- Aravindo</div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="review-text">"Mivi speakers redefine audio excellence with crystal-clear sound, stylish design, and effortless portability. Elevate your listening experience to new heights."</div>
+                <div class="reviewer-name">- Ananya</div>
+            </div>
+        </div>
+    </div>
+   
+
+<h1 class="faq-heading">Frequently Asked Questions (FAQ)</h1>
+
+       <div class="faq-box">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          How do wireless headphones connect to devices?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Wireless headphones connect via Bluetooth, allowing easy pairing with smartphones, tablets, and laptops.
+        </div>
+      </div>
+      
+      <div class="faq-box">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          What should I consider when buying a soundbar?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Look for sound quality, connectivity options, size, and compatibility with your TV or devices.
+        </div>
+      </div>
+
+      <div class="faq-box">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Do higher watt speakers always mean better sound?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Not necessarily. Wattage affects volume, but sound quality depends on design, drivers, and acoustics.
+        </div>
+      </div>
+
+      <div class="faq-box">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            How do I improve the bass on my headphones?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Adjust the equalizer settings on your device or choose headphones with built-in bass enhancement features.
+        </div>
+      </div>
+      <div class="wrapper">
+        <h1 class="coupon">Get Your Exclusive Coupon Code</h1>
+        <button id="generateBtn" class="button1">Generate Coupon Code</button>
+        <div id="couponCode" class="coupon-code">Your Coupon Code Will Appear Here</div>
+        <p class="discount-info">Use this coupon for a 25% discount!</p>
+    </div>
+
+    <a href="loginnew.html" class="signup-button">
+        <span class="message-icon">📩</span>
+        <div class="button-text">
+            <span class="main-text"> <b>Never miss a thing</b></span><br>
+            <span class="sub-text"><span style="color: blue;">Sign up</span> for texts to be notified about our best offers</span>
+        </div>
+    </a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 mb-4">
+                    <div style="background-color:#f8f8f8; padding: 10px; border-radius: 5px; width: 100%; max-width: 400px; margin-top:40px;">
+                        <h4 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 10px;color: #000;">Join Our Newsletter</h4>
+                        <form action="/subscribe" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+                          <input type="text" name="name" placeholder="Your Name" required style="padding: 8px; font-size: 14px; border: 1px solid #ddd; border-radius: 3px;">
+                          <input type="email" name="email" placeholder="Your Email" required style="padding: 8px; font-size: 14px; border: 1px solid #ddd; border-radius: 3px;">
+                          <button type="submit" style="background: linear-gradient(90deg, #007BFF, #FFA500, #FF69B4); color: white; padding: 10px; font-size: 14px; border: none; border-radius: 3px; cursor: pointer;">Subscribe</button>
+                        </form>
+                      </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <h5>Support</h5>
+                    <a href="help_center.html">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="policy.html">Privacy Policy</a>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <h5>Our Location</h5>
+                    <div id="map-container" style="height: 200px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.1749718037163!2d76.65719751063531!3d30.516091095965958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1725290208228!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © BEAT. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        function Anirudh(){
+          let a = document.body;
+          a.classList.toggle("dark");
+        // a.classList.add("dark"); //  ek baar krega bus change color
+                }
+                
+                function openPage() {
+            window.location.href = 'loginnew.html'; // Replace with your page's URL or file path
+        }
+        function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.icon');
+  
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
+    element.classList.remove('active');
+  } else {
+    answer.style.display = "block";
+    element.classList.add('active');
+  }
+}
+function closeDiv() {
+                document.getElementById("myDiv").style.display = "none";
+            }
+
+            document.getElementById("generateBtn").onclick = function() {
+            const couponCode = generateCouponCode(8); // Generate a coupon code of length 8
+            document.getElementById("couponCode").textContent = couponCode;
+            document.getElementById("generateBtn").disabled = true; // Disable the button after generating code
+        };
+
+        function generateCouponCode(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let coupon = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                coupon += characters.charAt(randomIndex);
+            }
+            return coupon;
+        }
+
+        /* **************************************************************************************************** */
+        let cartQuantities = {
+        'collar-classic-pro': 0,
+        'duopods-i6': 0,
+        'superpods-dueto': 0,
+        'duopods-i3': 0,
+         'combo1' : 0,
+         'combo2' : 0,
+        'combo3' : 0,
+         'combo4': 0,
+         'earbuds1' : 0,
+         'earbuds2' : 0,
+         'earbuds3' : 0,
+         'earbuds4' : 0,
+         'earphone1' : 0,
+         'earphone2' : 0,
+         'earphone3' : 0,
+         'earphone4' : 0,
+         'soundbar1' : 0,
+         'soundbar2' : 0,
+         'soundbar3' : 0,
+         'soundbar4' : 0
+
+    };
+    
+
+    function updateQuantity(productId, change) {
+        let quantityElement = document.getElementById(productId + '-quantity');
+        let currentQuantity = parseInt(quantityElement.innerText);
+        if (currentQuantity + change >= 0) {
+            currentQuantity += change;
+            quantityElement.innerText = currentQuantity;
+            cartQuantities[productId] = currentQuantity;
+        }
+    }
+
+    function addToCart(productName, productPrice) {
+        let quantity = cartQuantities[productName.toLowerCase().replace(/ /g, '-')];
+        if (quantity > 0) {
+            alert(`${quantity} ${productName} added to cart. Total Price: ₹${productPrice * quantity}`);
+        } else {
+            alert('Please select quantity before adding to cart.');
+        }
+    }
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
