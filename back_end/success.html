@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Success</title>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .message {
+      font-size: 32px;
+      font-weight: bold;
+      color: #007bff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="message" id="message"></div>
+
+  <script>
+   
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+
+   
+    if (message) {
+      document.getElementById("message").innerText = message;
+    } else {
+      document.getElementById("message").innerText = "No message found!";
+    }
+  </script>
+</body>
+</html>

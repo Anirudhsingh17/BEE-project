@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <style>
+    body { 
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../images/download.jfif);
+  
+
+}
+
+form {
+  background: linear-gradient(145deg, #ffffff, #e9ecef);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+  color: #343a40;
+  font-weight: bold;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  color: #495057;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#response-message {
+  margin-top: 15px;
+  text-align: center;
+  color: #007bff;
+  font-size: 14px;
+}
+
+/* Additions for e-commerce vibe */
+form::before {
+  content: "Register Here 🛒";
+  font-size: 36px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+input::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+button:active {
+  background-color: #003d80;
+  transform: scale(0.98);
+}
+
+  </style>
+</head>
+<body>
+ 
+  <form id="register-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="number" id="phone" name="phone" required><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="response-message"></div>
+
+  <script>
+    document.getElementById("register-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const phone = document.getElementById("phone").value;
+
+  const formData = {
+    name: name,
+    age: age,
+    email: email,
+    password: password,
+    phone: phone,
+  };
+
+  fetch("http://localhost:3001/register_user", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+
+      // Redirect to the next page with the success message
+      if (data.message) {
+        window.location.href = `success.html?message=${encodeURIComponent(data.message)}`;
+      }
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+});
+
+  </script>
+</body>
+</html>
